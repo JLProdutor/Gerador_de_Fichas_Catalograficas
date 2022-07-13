@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+  
+  }
+  div{
+    max-width: 100%;
+  }
+  .div1{
+    text-align: center;
+  }
+  .div2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }

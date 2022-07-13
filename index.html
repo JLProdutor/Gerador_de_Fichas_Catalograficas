@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Gerador de Ficha Catalográfica</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="corpo">
+  <h1>Gerador de Ficha Catalográfica</h1>
+  <form id="form" action="" method="POST">
+    <h2 style="font-size: 35px;">Dados da Ficha Catalográfica </h2>
+    <!-- AUTORES -->
+    <fieldset id="autores">
+      <legend><h2>Autores</h2></legend>
+      <div class="primaria">
+        <p>
+          <label for="autorNome">Autor nome:</label>
+          <input 
+          type="text" 
+          name="autorNome" 
+          id="autorNome"
+          placeholder="Digite o nome"
+          required>
+        </p>
+        <p>
+          <label for="sobrenomeAutor">Sobrenome:</label>
+          <input 
+          type="text" 
+          name="sobrenomeAutor" 
+          id="sobrenomeAutor"
+          placeholder="Digite o sobrenome"
+          required>
+        </p>
+        <p>
+          <label for="cautorNome">Coautor nome 1:</label>
+          <input
+          type="text"
+          name="autorNome" 
+          id="coautorNome"
+          placeholder="Digite o nome">
+        </p>
+        <p>
+          <label for="sobrenomeCoautor">Sobrenome:</label>
+           <input 
+           type="text" 
+           name="sobrenomeCoautor" 
+           id="sobrenomeCoautor"
+           placeholder="Digite o sobrenome">
+        </p>
+        <p>
+          <label for="autorNome">Coautor nome 2:</label>
+          <input 
+          type="text" 
+          name="coautorNome2" 
+          id="coautorNome2"
+          placeholder="Digite o nome">
+        </p>
+      </div>
+      <div class="secundaria">
+        
+        <p>
+          <label for="sobrenomeCoautor2">Sobrenome:</label>
+          <input 
+          type="text" 
+          name="sobrenomeCoautor2" 
+          id="sobrenomeCoautor2"
+          placeholder="Digite o sobrenome">
+        </p>
+      </div>
+    </fieldset>
+    
+     <!-- ORIENTADORES -->
+    <fieldset id="orienadores">
+      <legend><h2>Orientadores</h2></legend>
+      <div class="primaria">
+        <p>
+          <label for="orientadorNome">Orientador nome:</label>
+          <input 
+          type="text" 
+          name="orientadorNome" 
+          id="orientadorNome"
+          placeholder="Digite o nome"
+          required>
+        </p>
+        <p>
+          <p>
+          <label for="sobrenomeOrientador">Sobrenome:</label>
+          <input 
+          type="text" 
+          name="sobrenomeOrientador" 
+          id="sobrenomeOrientador"
+          placeholder="Digite o sobrenome"
+          required>
+        </p>
+          <label for="titulacaoOrientador">Titulação do orientador:</label>
+          <select
+          name="titulacaoOrientador" 
+          id="titulacaoOrientador"
+          placeholder="-- Escolha a titulação --">
+            <option checked >-- Escolha a titulação --</option>
+            <option value="Especialista">Especialista</option>
+            <option value="Master in Business Administration( no Brasil ou exterior)">Master in Business Administration (no Brasil ou exterior)</option>
+            <option value="Doutora, com título nacional">Doutora, com título nacional</option>
+            <option value="Doutor, com título nacional">Doutor, com título nacional</option>
+            <option value="Mestra - título concedidopor instituição no Brasil(Segundo ABL)">Mestra - título concedido por instituição no Brasil (Segundo ABL)</option>
+            <option value="Especialista">Mestre - título concedidopor instituição no Brasil (Segundo ABL)</option>            
+            <option value="Especialista">Master of Science (Mestrado no Exterior)</option>
+          </select>
+        </p>
+        <p>
+          <label for="coorientadorNome">Coorientador nome:</label>
+          <input
+          type="text"
+          name="coorientadorNome" 
+          id="coorientadorNome"
+          placeholder="Digite o nome">
+        </p>
+         </p>        
+      </div>
+      <div class="secundaria">
+       
+          <label for="sobrenomeCoorientador">Sobrenome</label>
+          <input 
+          type="text" 
+          name="sobrenomeCoorientador" 
+          id="sobrenomeCoorientador"
+          placeholder="Digite o sobrenome">
+        </p>
+      </div>
+        <p>
+          <label for="titulacaoCoorientador">Titulação do Coorientador:</label>
+          <select
+          name="titulacaoCoorientador" 
+          id="titulacaoCoorientador"
+          placeholder="-- Escolha a titulação --">
+            <option checked >-- Escolha a titulação --</option>
+            <option>Especialista</option>
+            <option>Master in Business Administration (no Brasil ou exterior)</option>
+            <option>Doutora, com título nacional</option>
+            <option>Doutor, com título nacional</option>
+            <option>Mestra - título concedido por instituição no Brasil (Segundo ABL)</option>
+            <option>Mestre - título concedido por instituição no Brasil (Segundo ABL)</option>            
+            <option>Master of Science (Mestrado no Exterior)</option>
+          </select>
+        
+    </fieldset>
+
+    <!-- TRABALHO -->
+    <fieldset id="Trabalho">
+      <legend>
+        <h2>Trabalho</h2>
+      </legend>
+      <div id="cor">
+         <strong>Atenção: </strong>
+         <span>usar letras maiúsculas somente na primeira letra do título, em nomes próprios, siglas e nomes de órgãos ou instituições</span>
+      </div>
+      <div class="primearia" >
+        <p>
+          <label for="titulo">Título:*</label>
+          <input 
+          type="text" 
+          name="titulo" 
+          id="titulo"
+          placeholder="O tîtulo"
+          required>
+        </p>
+        <p>
+          <label for="tipo">Tipo:*</label>
+          <select
+          name="tipo" 
+          id="tipo"
+          placeholder="-- tipo --"
+          required>
+            <option checked>-- Escolha o tipo--</option>
+            <option>Trabalho de Conclusão de Curso</option>
+            <option>Dissertação</option>
+            <option>Tese</option>
+          </select>
+        </p>
+        <p>
+          <label for="instituicao">Instituição:*</label>
+          <select
+          name="instituicao" 
+          id="instituicao"
+          placeholder="-- instituicao --"
+          required>
+            <option checked >-- Escolha o local--</option>
+            <option>Especialista</option>
+            <option>Universidade Nilton Lins - Manaus</option>
+            <option>FAC - Faculdade Cearense - Fortaleza</option>
+          </select>
+        </p>
+        <p>
+          <label for="area">Área:*</label>
+          <select
+          name="area" 
+          id="area"
+          placeholder="-- Escolha a área --"
+          required
+          onchange="areaC()">
+            <option checked >-- Escolha a área --</option>
+            <option value="chs">CIÊNCIAS HUMANAS E SOCIAIS</option>
+            <option value="cxt" >CIÊNCIAS EXATAS E DA TERRA</option>
+            <option value="cbs">CIÊNCIAS BIOLÓGICAS E SAÚDE</option>
+            <option value="csa">CIÊNCIAS SOCIAIS E APLICADAS</option>
+            <option value="et">ENGENHARIAS E TECNOLOGIAS</option>
+            <option value="t">TECNOLÓGICO</option>
+            <option value="l">LICENCIATURAS</option>
+            <option value="md">MESTRADO/DOUTORADO</option>
+            <option value="e">ESPECIALIZAÇÃO</option>
+          </select>
+        </p>
+        <p>
+        <p>
+          <label for="curso">Curso:*</label>
+          <select
+          name="curso" 
+          id="curso"
+          placeholder="-- Curso --"
+          required>
+            <option checked >-- Curso--</option>
+            <option id="escolha">-- Escolha uma área primeiro</option>
+          </select>
+        </p> 
+        <p>
+          <label for="assunto2">Assunto 1:</label>
+          <input
+          type="text"
+          name="assunto1" 
+          id="assunto1"
+          placeholder="Palavra-chave a">
+        </p> 
+        <p>
+          <label for="assunto2">Assunto 2:</label>
+          <input
+          type="text"
+          name="assunto2" 
+          id="assunto2"
+          placeholder="Palavra-chave b">
+        </p>
+        <p>
+          <label for="assunto3">Assunto 3:</label>
+          <input
+          type="text"
+          name="assunto3" 
+          id="assunto3"
+          placeholder="Palavra-chave c">
+        </p>
+        <p>
+          <label for="assunto4">Assunto 4:</label>
+          <input
+          type="text"
+          name="assunto4" 
+          id="assunto4"
+          placeholder="Palavra-chave d">
+        </p>
+        
+        <p>
+          <label for="assunto5">Assunto 5:</label>
+          <input
+          type="text"
+          name="assunto5" 
+          id="assunto5"
+          placeholder="Palavra-chave e">
+        </p>
+        <p>
+          <label for="ano">Ano:</label>
+          <input
+          type="text"
+          name="ano" 
+          id="ano"
+          placeholder="2018">
+        </p>
+      </div>
+      
+      <div class="secundaria">
+        
+         <p>
+          <label for="numeroPaginas">N° de páginas:</label>
+          <input 
+          type="text" 
+          name="numeroPaginas" 
+          id="numeroPaginas"
+          placeholder="555">
+        </p>
+      </div>
+    </fieldset>
+    <p class="buttons">
+      <button type="submit">Gerar PDF</button>
+      <button type="reset">Limpar</button>
+      
+    </p>
+  </form>
+
+  <script src="main.js"></script>
+</body>
+</html>
